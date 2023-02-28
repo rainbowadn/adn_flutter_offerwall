@@ -1,0 +1,22 @@
+PODS:
+  - adn_flutter_offerwall (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - adn_flutter_offerwall (from `.symlinks/plugins/adn_flutter_offerwall/ios`)
+  - Flutter (from `Flutter`)
+
+EXTERNAL SOURCES:
+  adn_flutter_offerwall:
+    :path: ".symlinks/plugins/adn_flutter_offerwall/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  adn_flutter_offerwall: 34342e2d5e689b97127df380a51cb94663ff0f6b
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+
+PODFILE CHECKSUM: ef19549a9bc3046e7bb7d2fab4d021637c0c58a3
+
+COCOAPODS: 1.11.2
