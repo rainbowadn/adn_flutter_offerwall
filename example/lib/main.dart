@@ -25,7 +25,7 @@ class _MyAppState extends State<MyApp> {
 
   Future<void> initOfferWall() async {
     final appKey = Platform.isAndroid
-        ? "andorid Unit ID"
+        ? "android Unit ID"
         : Platform.isIOS
             ? "iOS Unit ID"
             : throw Exception("Unsupported Platform");
