@@ -63,7 +63,7 @@ android 프로젝트의 manifest파일에 다음과 같은 설정이 필요합�
 ### 가. SDK 초기화
 
 ```dart
-// tnk rwd sdk를  import 합니다.
+// adn offerwall sdk를  import 합니다.
 import 'package:adn_flutter_offerwall/adn_flutter_offerwall_plugin.dart';
 // ...
 // ...
