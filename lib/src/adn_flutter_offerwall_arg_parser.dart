@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'adn_flutter_offerwall_constants.dart';
 
 class OfferWallArgParser {

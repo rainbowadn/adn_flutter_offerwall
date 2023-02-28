@@ -1,7 +1,7 @@
 name: adn_flutter_offerwall
-description: A new flutter plugin project.
-version: 0.0.1
-homepage:
+description: ADN Flutter Offerwall plugin project.
+version: 1.0.0
+homepage: https://github.com/rainbowadn/adn_flutter_offerwall
 
 environment:
   sdk: ">=2.16.1 <3.0.0"

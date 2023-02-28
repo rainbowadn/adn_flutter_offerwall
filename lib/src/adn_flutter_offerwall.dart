@@ -1,6 +1,4 @@
 import 'dart:async';
-import 'dart:ffi';
-import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'adn_flutter_offerwall_constants.dart';
@@ -10,7 +8,6 @@ class OfferWall {
   static final MethodChannel _channel =
       const MethodChannel(OfferConst.METHOD_CHANNEL)
         ..setMethodCallHandler(handleMethodCall);
-  static String? _flutterVersion;
   static String? userId;
 
   static String getPluginVersion() {
@@ -23,10 +20,6 @@ class OfferWall {
         : platform == 'ios'
             ? OfferConst.IOS_SDK_VERSION
             : '';
-  }
-
-  static void setFlutterVersion(String version) {
-    _flutterVersion = version;
   }
 
   static Future<void> init({required String appKey}) async {
