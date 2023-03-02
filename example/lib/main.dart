@@ -25,9 +25,9 @@ class _MyAppState extends State<MyApp> {
 
   Future<void> initOfferWall() async {
     final appKey = Platform.isAndroid
-        ? "278319633773876"
+        ? "android Unit ID"
         : Platform.isIOS
-            ? "220042543331989"
+            ? "iOS Unit ID"
             : throw Exception("Unsupported Platform");
     OfferWall.init(appKey: appKey);
     OfferWall.setUserId(userId: 'userId');
