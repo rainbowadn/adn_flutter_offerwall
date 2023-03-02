@@ -1,3 +1,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   package="com.adn.flutter.adn_flutter_offerwall.adn_flutter_offerwall">
+
+  <application>
+    <!-- Setting for Google Play Services -->
+    <meta-data
+        android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+
+    <!-- Activity for BuzzAd -->
+    <activity
+        android:name="com.buzzvil.buzzad.sdk.OfferWallActivity"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+  </application>
 </manifest>
