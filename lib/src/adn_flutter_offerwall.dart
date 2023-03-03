@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'adn_flutter_offerwall_constants.dart';
 import 'adn_flutter_offerwall_arg_parser.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'dart:io' show Platform;
 
 class OfferWall {
   static final MethodChannel _channel =
@@ -22,7 +24,9 @@ class OfferWall {
             : '';
   }
 
-  static Future<void> init({required String appKey}) async {
+  static Future<void> init() async {
+    await dotenv.load(fileName: '.env');
+    var appKey = Platform.isIOS ? dotenv.get('IOS_UNIT_ID') : dotenv.get('AOS_UNIT_ID');
     final args = OfferWallArgParser.init(appKey);
     return _channel.invokeMethod('init', args);
   }

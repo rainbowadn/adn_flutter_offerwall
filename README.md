@@ -59,8 +59,23 @@ android 프로젝트의 manifest파일에 다음과 같은 설정이 필요합�
 </manifest>
 ```
 
+### 가. 환경변수 초기화
 
-### 가. SDK 초기화
+1. `.env` 파일을 프로젝트의 루트에 만듭니다 .
+
+```sh
+AOS_UNIT_ID=aos_unit_id
+IOS_UNIT_ID=ios_unit_id
+```
+
+2. `.env` 파일을 `pubspec.yaml` 의 자산 번들에 추가합니다 . **경로가 .env 파일의 위치와 일치하는지 확인하세요!**
+
+```yml
+assets:
+  - .env
+```
+
+### 나. SDK 초기화
 
 ```dart
 // adn offerwall sdk를  import 합니다.
@@ -75,12 +90,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   Future<void> initOfferWall() async {
-    final appKey = Platform.isAndroid
-        ? "android Unit ID" // 안드로이드 광고 Unit ID
-        : Platform.isIOS
-            ? "iOS Unit ID" // IOS 광고 Unit ID
-            : throw Exception("Unsupported Platform");
-    OfferWall.init(appKey: appKey);
+    OfferWall.init();
     OfferWall.setUserId(userId: 'userId');
     OfferWall.setGender(gender: 'F');
     OfferWall.setBirthYear(birthYear: 1992);

@@ -1,8 +1,5 @@
-import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 import 'dart:async';
-
-import 'package:flutter/services.dart';
 import 'package:adn_flutter_offerwall/adn_flutter_offerwall_plugin.dart';
 
 void main() {
@@ -24,12 +21,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   Future<void> initOfferWall() async {
-    final appKey = Platform.isAndroid
-        ? "android Unit ID"
-        : Platform.isIOS
-            ? "iOS Unit ID"
-            : throw Exception("Unsupported Platform");
-    OfferWall.init(appKey: appKey);
+    OfferWall.init();
     OfferWall.setUserId(userId: 'userId');
     OfferWall.setGender(gender: 'M');
     OfferWall.setBirthYear(birthYear: 1992);

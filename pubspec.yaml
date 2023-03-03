@@ -1,6 +1,6 @@
 name: adn_flutter_offerwall
 description: ADN Flutter Offerwall plugin project.
-version: 1.0.3
+version: 1.0.4
 homepage: https://github.com/rainbowadn/adn_flutter_offerwall
 
 environment:
@@ -10,6 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_dotenv: ^5.0.2
 
 dev_dependencies:
   flutter_test:
